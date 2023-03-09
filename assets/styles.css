@@ -56,3 +56,25 @@ form .display input {
 form input.operator {
 	color: orange;
 }
+
+@media screen and (max-width: 480px) {
+	.container {
+		align-items: flex-end;
+		background: lightgray;
+	}
+	.calculator {
+		width: 100%;
+		height: 665px;
+		grid-gap: 0;
+		padding: 0;
+		border: none;
+		border-radius: none;
+		background: #3a4452;
+	}
+	/*form .display {
+		color: orange;
+		font-size: 3rem;
+		border: none;
+		border-radius: 0;
+	}*/
+}
