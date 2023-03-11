@@ -21,7 +21,7 @@
 			<div>
 				<input type="button" value="AC" onclick="display.value = '' " class="operator">
 				<input type="button" value="C" onclick="display.value = display.value.toString().slice(0,-1)" class="operator">
-				<input type="button" value="%" onclick="display.value += '%' " class="operator">
+				<input type="button" value="%" onclick="display.value = display.value /100 "class="operator">
 				<input type="button" value="/" onclick="display.value += '/' " class="operator">
 			</div>
 			<div>
