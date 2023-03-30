@@ -1,80 +1,64 @@
-*{
-	margin: 0;
-	padding: 0;
-	font-family: Arial, Helvetica, sans-serif;
-	box-sizing: border-box;
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:lightgray; 
+    margin:0;
+    scroll-margin-bottom: 0;
 }
 
-.container {
-	width: 100%;
-	height: 100vh;
-	background: lightgray;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+@media only screen and (max-width: 500px) {
+    body{
+        background-color: 393d3f;
+    }    
 }
 
-.calculator {
-	background: #3a4452;
-	padding: 20px;
-	border-radius: 10px;
+main {
+    width: 350px;
+    background-color:#3a4452;
+    padding:10px 10px 10px 10px;
+    margin:30px auto  0 auto;
+    border-radius:10px 10px 10px 10px;
+    box-shadow:1px black;
 }
 
-.calculator form input {
-	border: 0;
-	outline: 0;
-	width: 60px;
-	height: 60px;
-	border-radius: 10px;
-/*	box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px -5px 15px rgba(0, 0, 0, 0.2);*/
-	background: transparent;
-	font-size: 20px;
-	color: #fff;
-	cursor: pointer;
-	margin: 10px;
+section {
+    width:100%;
+    margin-bottom: 1em;
 }
 
-form .display {
-	display: flex;
-	justify-content: flex-end;
-	margin: 20px 0;
+#digital-display {
+    width:97%;
+    height:150px;
+    border-radius:8px 8px 8px 8px;
+    text-align:end;
+    border:none;
+    font-size:40px;
+    padding-right:10px;
+    background-color: #fdfdff;
+} 
+
+.button-group {
+    width:100%;
+    display:flex;
+    justify-content:space-evenly;
+    margin-top: 1em;
 }
 
-form .display input {
-	text-align: right;
-	flex: 1;
-	font-size: 45px;
-	box-shadow: none;
+.button-digits {
+    width:70px;
+    height:70px;
+    background-color: #fdfdff;
+    border-radius:100px 100px 100px 100px;
+    border:none;
+    font-size:30px;
+    color:black;
 }
 
-/* equal button */
-/*form input.equal {
-	width: 100px;
-
-}*/
-
-form input.operator {
-	color: orange;
-}
-
-@media screen and (max-width: 480px) {
-	.container {
-		align-items: flex-end;
-		background: lightgray;
-	}
-	.calculator {
-		width: 100%;
-		height: 665px;
-		grid-gap: 0;
-		padding: 0;
-		border: none;
-		border-radius: none;
-		background: #3a4452;
-	}
-	/*form .display {
-		color: orange;
-		font-size: 3rem;
-		border: none;
-		border-radius: 0;
-	}*/
+.button-operators {
+    width:70px;
+    height:70px;
+    background-color: #561643;
+    border-radius:100px 100px 100px 100px;
+    border:none;
+    font-size:30px;
+    color: #fdfdff;
 }

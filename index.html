@@ -1,58 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Simple Calculator App by Coder-Ralph  -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="title" content="calculator"/>
-	<title>Calculator App</title>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="app_name" content="calculator.app"/>
+        <title>Calculator</title>
 
-	<!-- External CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/styles.css">
-</head>
-<body>
-	
-	<div class="container">
-		<div class="calculator">
-			<form>
-				<div class="display">
-					<input type="text" name="display">
-				</div>
-			<div>
-				<input type="button" value="AC" onclick="display.value = '' " class="operator">
-				<input type="button" value="C" onclick="display.value = display.value.toString().slice(0,-1)" class="operator">
-				<input type="button" value="%" onclick="display.value = display.value /100 "class="operator">
-				<input type="button" value="/" onclick="display.value += '/' " class="operator">
-			</div>
-			<div>
-				<input type="button" value="7" onclick="display.value += '7' ">
-				<input type="button" value="8" onclick="display.value += '8' ">
-				<input type="button" value="9" onclick="display.value += '9' ">
-				<input type="button" value="*" onclick="display.value += '*' " class="operator">
-			</div>
-			<div>
-				<input type="button" value="4" onclick="display.value += '4' ">
-				<input type="button" value="5" onclick="display.value += '5' ">
-				<input type="button" value="6" onclick="display.value += '6' ">
-				<input type="button" value="-"onclick="display.value += '-' " class="operator">
-			</div>
-			<div>
-				<input type="button" value="1" onclick="display.value += '1' ">
-				<input type="button" value="2" onclick="display.value += '2' ">
-				<input type="button" value="3" onclick="display.value += '3' ">
-				<input type="button" value="+" onclick="display.value += '+' " class="operator">
-			</div>
-			<div>
-				<input type="button" value="." onclick="display.value += '.' " class="operator">
-				<input type="button" value="0" onclick="display.value += '0' ">
-				<input type="button" value="00" onclick="display.value += '00' ">
-				<input type="button" value="=" onclick="display.value =eval(display.value)" class="equal operator">
-			</div>
-			</form>		
-		</div>	
-	</div>
-
-	<!-- <script src="assets/function.js"></script> -->
-
-</body>
+        <!-- External CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/styles.css">
+    </head>
+    <body>
+        <!-- JS Script -->
+        <script src="assets/functions.js"></script>
+        <!--main container of the calculator app-->
+        <main>
+            <form name="formcalc">
+                <section>
+                    <input type="text" name="digital-display" id="digital-display" disabled>
+                </section>
+                <section>
+                    <div class="button-group">
+                        <button type="button" class="button-operators" onclick="clearAll()">AC</button>
+                        <button type="button" class="button-operators" onclick="clearRight()">C</button>
+                        <button type="button" class="button-operators" onclick="getPercent()">%</button>
+                        <button type="button" class="button-operators" onclick="setOperator('/')">/</button>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="button-digits" onclick="setNum('7')">7</button>
+                        <button type="button" class="button-digits" onclick="setNum('8')">8</button>
+                        <button type="button" class="button-digits" onclick="setNum('9')">9</button>
+                        <button type="button" class="button-operators" onclick="setOperator('*')">x</button>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="button-digits" onclick="setNum('4')">4</button>
+                        <button type="button" class="button-digits" onclick="setNum('5')">5</button>
+                        <button type="button" class="button-digits" onclick="setNum('6')">6</button>
+                        <button type="button" class="button-operators" onclick="setOperator('-')">-</button>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="button-digits" onclick="setNum('1')">1</button>
+                        <button type="button" class="button-digits" onclick="setNum('2')">2</button>
+                        <button type="button" class="button-digits" onclick="setNum('3')">3</button>
+                        <button type="button" class="button-operators" onclick="setOperator('+')">+</button>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="button-digits" onclick="setNum('.')">.</button>
+                        <button type="button" class="button-digits" onclick="setNum('0')">0</button>
+                        <button type="button" class="button-digits" onclick="setNum('00')">00</button>
+                        <button type="button" class="button-operators" onclick="calculate()">=</button>
+                    </div>
+                </section>
+            </form>
+        </main>
+       
+    </body>
 </html>
